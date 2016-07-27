@@ -49,7 +49,7 @@ module NpmPipelineRails
           Utils.do_system app.config.npm.build
         end
 
-        task(:precompile).enhance ['npm_build']
+        task :precompile => :npm_build
       end
     end
 
